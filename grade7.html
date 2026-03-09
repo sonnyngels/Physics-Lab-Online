@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 7 - Matter and Pressure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    background-image:url('physics bg.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:#333;
+}
+
+nav{
+    background-color:#4a7a8c;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+    transition:color 0.3s ease;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:-5px;
+    left:0;
+    background-color:#6cbcc4;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#6cbcc4;
+}
+
+.title-section{
+    background-color:rgba(153,208,242,0.9);
+    padding:50px 20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.3);
+    animation:fadeDown 1s ease forwards;
+}
+
+.title-section h1{
+    font-size:42px;
+    color:#1e3a5f;
+    margin:0;
+}
+
+.title-section h2{
+    font-size:24px;
+    color:#315e7a;
+    margin-top:10px;
+}
+
+.content-box{
+    background-color:rgba(255,255,255,0.95);
+    width:70%;
+    margin:35px auto;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    opacity:0;
+    transition:opacity 0.8s ease, transform 0.35s ease;
+    cursor:pointer;
+}
+
+.content-box.show{
+    opacity:1;
+}
+
+.content-box:hover{
+    transform:translateY(-5px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.content-box h3{
+    color:#1e3a5f;
+    font-size:26px;
+    border-bottom:2px solid #4a7a8c;
+    padding-bottom:6px;
+    margin:0 0 10px 0;
+}
+
+.content-box p{
+    color:#315e7a;
+    font-size:17px;
+    line-height:1.4;
+    margin:4px 0;
+}
+
+ol,ul{
+    margin:6px 0 10px 22px;
+    line-height:1.4;
+}
+
+li{
+    margin:4px 0;
+}
+
+.formula{
+    font-family:monospace;
+    background:rgba(255,255,255,0.6);
+    padding:8px 12px;
+    border-radius:6px;
+    display:inline-block;
+    margin:6px 0;
+}
+
+.grade-photo{
+    max-width:420px;
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    border:3px solid #4a7a8c;
+    margin:12px auto;
+    display:block;
+}
+
+.video-container{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(74, 122, 140, 0.3);
+}
+
+table th {
+    background-color: rgba(74, 122, 140, 0.2);
+    color: #1e3a5f;
+}
+
+table tr:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+ol, ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(5px);
+    color:white;
+    margin-top:40px;
+}
+
+@keyframes fadeDown{
+0%{opacity:0; transform:translateY(-40px);}
+100%{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="members.html">About Us</a>
+    <a href="grade7.html">Grade 7</a>
+    <a href="grade8.html">Grade 8</a>
+    <a href="grade9sem1.html">Grade 9 Semester 1</a>
+    <a href="grade9sem2.html">Grade 9 Semester 2</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+<div class="title-section">
+<h1>Grade 7</h1>
+<h2>Chapter 2: Solid, Liquid, Gases</h2>
+</div>
+
+<div class="content-box">
+<h3>2.1 States of Matter</h3>
+<p>Matter exists in three main states: <strong>solid, liquid, and gas</strong>. They differ by particle arrangement, movement, and properties.</p>
+
+<table boarder="1" style="border-collapse:collapse; width:100%; text-align:center;">
+<tr>
+<th>Property</th>
+<th>Solid</th>
+<th>Liquid</th>
+<th>Gas</th>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Definite</td>
+<td>Takes shape of container</td>
+<td>No fixed shape</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Fixed</td>
+<td>Fixed</td>
+<td>Variable</td>
+</tr>
+<tr>
+<td>Particle Arrangement</td>
+<td>Closely packed</td>
+<td>Close but can slide</td>
+<td>Far apart</td>
+</tr>
+<tr>
+<td>Particle Movement</td>
+<td>Vibrate in place</td>
+<td>Slide past each other</td>
+<td>Move freely</td>
+</tr>
+<tr>
+<td>Compressibility</td>
+<td>Almost none</td>
+<td>Slight</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Ice, metal</td>
+<td>Water, oil</td>
+<td>Air, oxygen</td>
+</tr>
+</table>
+
+<img src="g7-matter.png" class="grade-photo">
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/MrTxRn9MNWM"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+
+<div class="content-box">
+<h3>2.2 Density</h3>
+<p>Density is the mass of a substance per unit volume. It helps explain why some objects float while others sink.</p>
+
+<p class="formula">ρ = m / V</p>
+<ul>
+<li>ρ = density</li>
+<li>m = mass</li>
+<li>V = volume</li>
+</ul>
+
+<p>Solids usually have higher density, liquids medium, and gases very low density because of particle spacing. An object floats if it is less dense than the fluid it is in.</p>
+</div>
+
+<div class="content-box">
+<h3>2.3 Pressure</h3>
+<p>Pressure is the force applied per area. It shows how strongly something pushes on a surface.</p>
+
+<p class="formula">P = F / A</p>
+<ul>
+<li>P = pressure</li>
+<li>F = force</li>
+<li>A = area</li>
+</ul>
+
+<p>Pressure increases with greater force or smaller area. In fluids, pressure comes from the weight of particles above a point.</p>
+<img src="g7-pressure.png" class="grade-photo">
+
+</div>
+
+<div class="content-box">
+<h3>2.4 Hydrostatic Pressure</h3>
+<p>Hydrostatic pressure is the pressure in a fluid at rest due to the weight of the fluid above a point.</p>
+
+<p class="formula">P = ρgh</p>
+<ul>
+<li>P = hydrostatic pressure</li>
+<li>ρ = density of fluid</li>
+<li>g = gravity</li>
+<li>h = depth</li>
+</ul>
+
+<p>It increases with depth. For example, divers feel more pressure deeper underwater, and the bottom of a dam experiences higher pressure than the top.</p>
+
+<img src="hydrostatic pressure.png" class="grade-photo">
+</div>
+
+<div class="content-box">
+<h3>2.5 Pascal’s Principle</h3>
+<p>When pressure is applied to a fluid in a closed container, the pressure spreads equally in all directions. Liquids are nearly incompressible, so this principle allows pressure to move objects far from the applied point.</p>
+
+<p>Pascal’s Principle is used in hydraulic machines such as:</p>
+<ul>
+<li>Hydraulic jacks</li>
+<li>Car brakes</li>
+<li>Hydraulic lifts</li>
+<li>Construction machinery</li>
+</ul>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/EK2OD2O6-LM"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+
+<div class="content-box">
+  <h3>Learn More From our Presentation:</h3>
+  <embed src="Grade 7 Physics – Chapter 2.pdf" width="100%" height="600px" type="application/pdf">
+</div>
+
+<div class="content-box">
+<h3>Interactive Simulation: States of Matter</h3>
+
+<p>
+Explore how particles behave in solids, liquids, and gases using this interactive PhET simulation.
+Change the temperature, observe particle movement, and see how matter changes state.
+</p>
+
+<div class="video-container">
+<iframe 
+src="https://phet.colorado.edu/sims/html/states-of-matter/latest/states-of-matter_en.html"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+<div class="content-box">
+<h3>Try the Interactive Quiz!</h3>
+<p>
+<a href="https://dashboard.blooket.com/set/69ac5e336790eef16f72209f" target="_blank">
+Open the Blooket Practice Activity
+</a>
+</p>
+</div>
+
+<footer>
+<p>© 2026 Physics Lab Online</p>
+</footer>
+
+<script>
+const boxes = document.querySelectorAll('.content-box');
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{threshold:0.15});
+
+boxes.forEach(box=>{
+    observer.observe(box);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grade 9 Semester 1 - Dynamic Electricity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    background-image:url('physics bg.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:#333;
+}
+
+nav{
+    background-color:#4a7a8c;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+    transition:color 0.3s ease;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:-5px;
+    left:0;
+    background-color:#6cbcc4;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#6cbcc4;
+}
+
+.title-section{
+    background-color:rgba(153,208,242,0.9);
+    padding:50px 20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.3);
+    animation:fadeDown 1s ease forwards;
+}
+
+.title-section h1{
+    font-size:42px;
+    color:#1e3a5f;
+    margin:0;
+}
+
+.title-section h2{
+    font-size:24px;
+    color:#315e7a;
+    margin-top:10px;
+}
+
+.content-box{
+    background-color:rgba(255,255,255,0.95);
+    width:70%;
+    margin:35px auto;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    opacity:0;
+    transition:opacity 0.8s ease, transform 0.35s ease;
+    cursor:pointer;
+}
+
+.content-box.show{
+    opacity:1;
+}
+
+.content-box:hover{
+    transform:translateY(-5px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.content-box h3{
+    color:#1e3a5f;
+    font-size:26px;
+    border-bottom:2px solid #4a7a8c;
+    padding-bottom:6px;
+    margin:0 0 10px 0;
+}
+
+.content-box p{
+    color:#315e7a;
+    font-size:17px;
+    line-height:1.4;
+    margin:4px 0;
+}
+
+ol,ul{
+    margin:6px 0 10px 22px;
+    line-height:1.4;
+}
+
+li{
+    margin:4px 0;
+}
+
+.formula{
+    font-family:monospace;
+    background:rgba(255,255,255,0.6);
+    padding:8px 12px;
+    border-radius:6px;
+    display:inline-block;
+    margin:6px 0;
+}
+
+.grade-photo{
+    max-width:420px;
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    border:3px solid #4a7a8c;
+    margin:12px auto;
+    display:block;
+}
+
+.video-container{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(5px);
+    color:white;
+    margin-top:40px;
+}
+
+@keyframes fadeDown{
+    0%{opacity:0; transform:translateY(-40px);}
+    100%{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="members.html">About Us</a>
+    <a href="grade7.html">Grade 7</a>
+    <a href="grade8.html">Grade 8</a>
+    <a href="grade9sem1.html">Grade 9 Semester 1</a>
+    <a href="grade9sem2.html">Grade 9 Semester 2</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+
+<div class="title-section">
+    <h1>Grade 9 Semester 1</h1>
+    <h2>Chapter 2: Dynamic Electricity</h2>
+</div>
+
+
+<div class="content-box">
+
+<h3>2.1 Electric Potential & Electrical Potential Difference</h3>
+
+<p>
+Electric potential is the work done per unit charge to bring a charge from infinity to a point in an electric field.
+It shows how much electric potential energy a charge has at that point.
+</p>
+
+<p class="formula">V = W / q</p>
+
+<p>
+Where W is work and q is charge. The SI unit is volt (V).
+</p>
+
+<p>
+Potential difference (voltage) is the difference in electric potential between two points in an electric field.
+It tells us how much energy per unit charge is needed to move a charge from one point to another.
+</p>
+
+<p class="formula">V = W / q</p>
+
+<p>
+The formula is V = W/q, and it is also measured in volts (V).
+</p>
+
+<p>
+The main difference is that electric potential is measured at one point,
+while potential difference compares two points.
+</p>
+
+<p>
+Electric current flows from higher potential to lower potential,
+and this flow is usually created by a battery or cell.
+</p>
+
+<p>
+The concept of voltage is related to Ohm’s Law:
+</p>
+
+<p class="formula">V = IR</p>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.2 Electric Current</h3>
+
+<p>
+Electric current is the flow of electrons through a conductor. It is very important in daily life because many devices like phones, televisions, ovens, and lights use electric current to work. The SI unit of electric current is the ampere (A).
+</p>
+
+<p>
+It is very important in daily life because many devices like phones,
+televisions, ovens, and lights use electric current to work.
+</p>
+
+<p>
+Materials that allow electricity to flow easily are called <strong>conductors</strong> (like metals, salt solutions, and the human body), while materials that block the flow of electricity are called <strong>insulators</strong> (like plastic, wood, and glass).
+</p>
+
+<p>
+For electric current to flow, a closed circuit and a voltage source (such as a battery) are needed. Voltage pushes electrons to move in one direction.
+</p>
+
+<p>
+There are two types of current: Direct Current (DC), which flows in one direction, and Alternating Current (AC), which changes direction. When electric current flows, it can cause several effects such as heating (like in an iron), magnetic effects (like electromagnets), and chemical effects (like electroplating).
+</p>
+
+<img src="electric current.png" class="grade-photo">
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.3 Ohm’s Law</h3>
+
+<p>
+Georg Simon Ohm (1787–1854) discovered that the electric current (I) flowing in a wire is directly proportional to the voltage (V) applied (I ∝ V). This relationship is called Ohm’s Law, where voltage causes current to flow. It is an empirical law, meaning it was proven through experiments, but the relationship does not always happen in all materials.
+</p>
+
+<p>
+In circuits, resistance (R) is what slows down or blocks the flow of current. It happens when moving charges collide with atoms and molecules in a material, which limits the current. Current is inversely proportional to resistance (I ∝ 1/R), so if resistance increases, the current decreases.
+</p>
+
+<p>
+When these ideas are combined, we get Ohm’s Law:
+</p>
+
+<p class="formula">
+I = V / R
+</p>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.4 Application of Ohm’s Law</h3>
+
+<p>
+One application of Ohm’s Law is in household electrical devices like a light bulb. Using Ohm’s Law (I = V/R), we can calculate how much current will flow through the bulb when a certain voltage is applied and the resistance of the bulb is known.
+</p>
+<p>For example, if a bulb has a resistance of 60 Ω and the voltage is 120 V, the current can be calculated:
+</p>
+<p class="formula">
+I = V / R = 120 / 60 = 2 A
+</p>
+
+<p>
+This means 2 amperes of current flow through the bulb. This calculation helps engineers and electricians design safe electrical circuits and choose the right components so devices work properly without overheating.
+</p>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.5 Kirchhoff’s Law</h3>
+
+<p>
+Gustav Robert Kirchhoff (1824–1887) developed Kirchhoff’s Circuit Laws in 1845 to help analyze electrical circuits. These laws are based on the conservation of charge and energy and are used to calculate current, voltage, and resistance in circuits.
+</p>
+
+<p><strong>Kirchhoff’s Current Law (KCL)</strong></p>
+<p>The total current entering a junction (node) is equal to the total current leaving it. This follows the conservation of charge.</p>
+
+<p class="formula">
+I₁ + I₂ + I₃ − I₄ − I₅ = 0
+</p>
+
+<img src="kcl.png" class="grade-photo">
+
+<p><strong>Kirchhoff’s Voltage Law (KVL)</strong></p>
+<p>The sum of all voltages around a closed loop equals zero. This follows the conservation of energy and means that the total voltage supplied equals the total voltage drop.
+</p>
+
+<img src="kvl.png" class="grade-photo">
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.6 Series and Parallel Circuits</h3>
+
+<p><strong>Series Circuit</strong></p>
+
+<p>
+A series circuit is a circuit where the same current flows through all components because the current has only one path. For example, string lights connected in series will all turn off if one bulb breaks.
+</p>
+
+<p><strong>Parallel Circuit</strong></p>
+
+<p>
+A parallel circuit is a circuit where electric current has multiple paths to flow. In this circuit, each component has the same voltage across it.
+</p>
+
+<img src="series parallel.png" class="grade-photo">
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/8Z0jhQeYDUE"
+title="Series and Parallel Circuits Explanation"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.7 Electromotive Force (EMF)</h3>
+
+<p>
+Electromotive Force (EMF) is the electric potential produced by a battery or generator that pushes electric charges through a circuit. It is the work done per unit charge to move electricity. The symbol for EMF is ε, and its unit is volt (V).
+</p>
+
+<p class="formula">
+ε = V + Ir
+</p>
+<p>EMF can sometimes be negative if it works against the direction of power.
+</p>
+<p>EMF is different from potential difference. EMF is the energy given to charges, while potential difference is the energy used by components in a circuit. Terminal voltage is the voltage across a battery when the circuit is turned on, while EMF is the maximum voltage when no current flows.
+</p>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.8 Electric Sources</h3>
+
+<ul>
+<li>Direct Current (DC): electricity flows in one direction (example: batteries).</li>
+<li>Alternating Current (AC): electricity changes direction repeatedly (example: generators in power plants).
+</li>
+</ul>
+<p>Electric sources produce Electromotive Force (EMF), which is the push that makes electrons move through a circuit.</p>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/qC1f5P-Vj0E"
+title="Electric Current Source"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>2.9 Resistor</h3>
+
+<p>
+A resistor limits electric current in a circuit.
+</p>
+
+<ul>
+<li>Control Voltage: Resistors can reduce the voltage in certain parts of a circuit so that devices receive the correct amount of voltage.
+</li>
+<li>Control Current: They limit the amount of current flowing in a circuit to prevent damage to electronic components.
+</li>
+<li>Voltage Divider: Resistors can divide voltage in a circuit so different parts receive different voltage levels.
+</li>
+<li>Protect Components: By controlling current, resistors protect sensitive components from excessive electricity.
+</li>
+</ul>
+
+</div>
+
+<div class="content-box">
+  <h3>Learn More From our Presentation:</h3>
+  <embed src="Electrostatic Force.pdf" width="100%" height="600px" type="application/pdf">
+</div>
+
+<div class="content-box">
+
+<h3>Interactive Simulation: Circuit Construction Kit (DC)</h3>
+
+<p>
+Build and test electric circuits using this interactive PhET virtual lab. 
+You can connect batteries, resistors, bulbs, and switches, then measure current and voltage using virtual ammeters and voltmeters to explore series and parallel circuits.
+</p>
+
+<div class="video-container">
+<iframe 
+src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+<div class="content-box">
+
+<h3>Try the Interactive Quiz!</h3>
+
+<p>
+<a href="https://dashboard.blooket.com/set/69ac5610572efa156e0e0b31" target="_blank">
+Open the Blooket Practice Activity
+</a>
+</p>
+
+</div>
+
+<footer>
+    <p>© 2026 Physics Lab Online</p>
+</footer>
+
+
+<script>
+const boxes = document.querySelectorAll('.content-box');
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.15
+});
+
+boxes.forEach(box=>{
+    observer.observe(box);
+});
+</script>
+
+</body>
+</html>

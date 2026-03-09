@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 8 - Thermal Physics 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    background-image:url('physics bg.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:#333;
+}
+
+
+nav{
+    background-color:#4a7a8c;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+    transition:color 0.3s ease;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:-5px;
+    left:0;
+    background-color:#6cbcc4;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#6cbcc4;
+}
+
+.title-section{
+    background-color:rgba(153,208,242,0.9);
+    padding:50px 20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.3);
+    animation:fadeDown 1s ease forwards;
+}
+
+.title-section h1{
+    font-size:42px;
+    color:#1e3a5f;
+    margin:0;
+}
+
+.title-section h2{
+    font-size:24px;
+    color:#315e7a;
+    margin-top:10px;
+}
+
+.content-box{
+    background-color:rgba(255,255,255,0.95);
+    width:70%;
+    margin:35px auto;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    opacity:0;
+    transition:opacity 0.8s ease, transform 0.35s ease;
+    cursor:pointer;
+}
+
+.content-box.show{
+    opacity:1;
+}
+
+.content-box:hover{
+    transform:translateY(-5px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.content-box h3{
+    color:#1e3a5f;
+    font-size:26px;
+    border-bottom:2px solid #4a7a8c;
+    padding-bottom:6px;
+    margin:0 0 10px 0;
+}
+
+.content-box p{
+    color:#315e7a;
+    font-size:17px;
+    line-height:1.4;
+    margin:4px 0;
+}
+
+ol,ul{
+    margin:6px 0 10px 22px;
+    line-height:1.4;
+}
+
+li{
+    margin:4px 0;
+}
+
+.formula{
+    font-family:monospace;
+    background:rgba(255,255,255,0.6);
+    padding:8px 12px;
+    border-radius:6px;
+    display:inline-block;
+    margin:6px 0;
+}
+
+.grade-photo{
+    max-width:420px;
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    border:3px solid #4a7a8c;
+    margin:12px auto;
+    display:block;
+}
+
+.video-container{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(74, 122, 140, 0.3);
+}
+
+table th {
+    background-color: rgba(74, 122, 140, 0.2);
+    color: #1e3a5f;
+}
+
+table tr:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+ol, ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(5px);
+    color:white;
+    margin-top:40px;
+}
+
+@keyframes fadeDown{
+0%{opacity:0; transform:translateY(-40px);}
+100%{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="members.html">About Us</a>
+    <a href="grade7.html">Grade 7</a>
+    <a href="grade8.html">Grade 8</a>
+    <a href="grade9sem1.html">Grade 9 Semester 1</a>
+    <a href="grade9sem2.html">Grade 9 Semester 2</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+<div class="title-section">
+    <h1>Grade 8</h1>
+        <h2>Chapter 2: Thermal Physics 2</h2>
+</div>
+
+<div class="content-box">
+    <h3>2.1 Heat Capacity and Specific Heat Capacity</h3>
+        <p>Heat capacity (C) is the amount of heat energy needed to raise the temperature of an object by 1°C or 1 K.</p>
+        <p class="formula">C = Q / △T</p>
+        <p>Where:</p>
+            <ul>
+            <li>Q = heat energy (J)</li>
+            <li>ΔT = temperature change</li>
+            </ul>
+        <p>Specific heat capacity (c) is the heat needed to raise the temperature of 1 kg of a substance by 1°C (or 1 K).</p>
+        <p class="formula">Q = mc△T</p>
+        <p>Where:</p>
+            <ul>
+                <li>Q = heat energy (J)</li>
+                <li>m = mass (kg)</li>
+                <li>c = specific heat capacity (J/kg°C)</li>
+                <li>ΔT = temperature change (°C)</li>
+            </ul>
+                <p>Example: Water has a high specific heat capacity (~4186 J/kg°C), meaning it needs a lot of heat to increase its temperature.</p>
+    <img src="shc.png" class="grade-photo">
+</div>
+
+<div class="content-box">
+    <h3>2.2 Specific Latent Heat (Melting and Boiling)</h3>
+        <p>Latent heat is heat energy absorbed or released when a substance changes its state without changing temperature.</p>
+        <p><strong>Types:</strong></p>
+        <p><strong>1. Latent Heat of Fusion (Melting)</strong></p>
+        <p>Heat needed to change a substance from solid → liquid.</p>
+        <p>Example: Ice → Water</p>
+        <p><strong>2. Latent Heat of Vaporization (Boiling)</strong></p>
+        <p>Heat needed to change a substance from liquid → gas.</p>
+        <p>Example: Water → Steam.</p>
+        <p class="formula">Q = mL</p>
+        <p>Where:</p>
+            <ul>
+                <li>Q = heat energy (J)</li>
+                <li>m = mass (kg)</li>
+                <li>L = specific latent heat (J/kg)</li>
+            </ul>
+        <p>During a phase change, temperature stays constant because the heat energy is used to break intermolecular bonds, not increase temperature.</p>
+<img src="slh.png" class="grade-photo">
+
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VFwf1JldiJA"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+</div>
+
+<div class="content-box">
+<h3>2.3 The Difference Between Boiling and Evaporation</h3>
+
+<table boarder="1" style="border-collapse:collapse; width:100%; text-align:center;">
+<tr>
+<th>Boiling</th>
+<th>Evaporation</th>
+</tr>
+<tr>
+<td>Happens at a fixed temperature (boiling point)</td>
+<td>Happens at any temperature</td>
+</tr>
+<tr>
+<td>Occurs throughout the liquid</td>
+<td>Occurs only at the surface</td>
+</tr>
+<tr>
+<td>Fast process</td>
+<td>Slow process</td>
+</tr>
+<tr>
+<td>Produces bubbles</td>
+<td>No bubbles</td>
+</tr>
+</table>
+</div>
+
+<div class="content-box">
+    <h3>2.4 Heating and Cooling Curve Graph</h3>
+        <p>A heating curve shows how temperature changes as heat is added to a substance.</p>
+        <p><strong>Stages:</strong></p>
+        <ul>
+            <li>Solid heating → temperature increases</li>
+            <li>Melting point → temperature stays constant</li>
+            <li>Liquid heating → temperature increases</li>
+            <li>Boiling point → temperature stays constant</li>
+            <li>Gas heating → temperature increases</li>
+        </ul>
+        <p>Flat sections of the graph represent phase change (latent heat).</p>
+    <img src="heating&cooling.png" class="grade-photo">
+</div>
+
+<div class="content-box">
+    <h3>2.5 Black’s Principle</h3>
+        <p>Black’s Principle: When hot and cold objects are mixed, heat lost by the hot object equals heat gained by the cold object.</p>
+        <p class="formula">Q(lost) = Q(gained)</p>
+        <p>Example: Hot water + cold water → reach thermal equilibrium.</p>
+        <p>This principle is used in calorimetry experiments.</p>
+</div>
+
+<div class="content-box">
+    <h3>2.6 Heat Transfer</h3>
+        <p>Heat always flows from higher temperature to lower temperature.</p>
+            <p><strong>1. Conduction</strong></p>
+                <p>Heat transfer through direct contact between particles.</p>
+                <p>Example: Metal spoon in hot soup becomes hot.</p>
+
+            <p><strong>2. Convection</strong></p>
+                <p>Heat transfer through movement of fluids (liquid or gas).</p>
+                <p>Example: Boiling water circulation and sea breeze.</p>
+
+            <p><strong>3. Radiation</strong></p>
+                <p>Heat transfer through electromagnetic waves (no medium needed).</p>
+                <p>Example: Heat from the Sun reaching Earth.</p>
+    <img src="heat transfer.png" class="grade-photo">
+</div>
+
+<div class="content-box">
+    <h3>2.7 Consequences and Applications of Energy Transfer</h3>
+        <p><strong>Examples in daily life:</strong></p>
+            <ul>
+                <li><strong>Conduction</strong> – Cooking pans made of metal, ironing clothes</li>
+                <li><strong>Convection</strong> – Hot air balloons rise, ocean currents</li>
+                <li><strong>Radiation</strong> – Solar panels, feeling heat from a fire</li>
+            </ul>
+        <p>Applications help improve energy efficiency and technology.</p>
+
+    <div class="video-container">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/lvyCe0UaqJY"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+</div>
+
+<div class="content-box">
+  <h3>Learn More From our Presentation:</h3>
+  <embed src="Thermal Physics 2 - PPT.pdf" width="100%" height="600px" type="application/pdf">
+</div>
+
+<div class="content-box">
+
+<h3>Interactive Simulation: Heat Capacity</h3>
+
+<p>
+Use this interactive simulation to explore how heat capacity affects temperature change. 
+Compare objects with different heat capacities and observe how much heat energy is needed 
+to raise their temperature.
+</p>
+
+<div class="video-container">
+<iframe 
+src="https://javalab.org/en/heat_capacity_en/"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+<div class="content-box">
+    <h3>Try the Interactive Quiz!</h3>
+        <p>
+        <a href="https://dashboard.blooket.com/set/69ac563d572efa156e0e0b3b" target="_blank">Open the Blooket Practice Activity</a>
+        </p>
+</div>
+
+<footer>
+    <p>© 2026 Physics Lab Online</p>
+</footer>
+
+<script>
+const boxes = document.querySelectorAll('.content-box');
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.15
+});
+
+boxes.forEach(box=>{
+    observer.observe(box);
+});
+</script>
+
+</body>
+</html>

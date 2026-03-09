@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Physics Lab Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    background-image: url('physics bg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+nav {
+    background-color: #4a7a8c;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.content-box {
+    opacity: 0; 
+    transition: opacity 0.8s ease, transform 0.35s ease;
+}
+
+.content-box.show {
+    opacity: 1; 
+}
+
+nav:hover {
+    background-color: #3b6a7a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+    display: inline-block;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #b0e0f0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #6cbcc4; 
+}
+
+nav a:hover::after {
+    width: 100%;
+    background-color: #6cbcc4; 
+}
+
+.title-section {
+    background-color: rgba(153, 208, 242, 0.9);
+    padding: 60px 20px;
+    text-align: center;
+    animation: slideIn 1s;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin-top: 0; 
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.title-section h1 {
+    font-size: 42px;
+    color: #1e3a5f;
+    margin: 0;
+}
+
+.title-section h2 {
+    font-size: 24px;
+    color: #315e7a;
+    margin-top: 15px;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 70%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: center;
+    gap: 30px;
+    
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.content-box:hover{
+    transform:translateY(-5px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.content-box h3 {
+    color: #1e3a5f;
+    font-size: 26px;
+    border-bottom: 2px solid #4a7a8c;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content-box p {
+    color: #315e7a;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.content-box.intro-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.school-info-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.school-logo-container {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.school-logo {
+    width: 180px;
+    height: auto;
+    background-color: transparent; 
+}
+
+.mascot-img-container {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.mascot-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #4a7a8c;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.mascot-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.mascot-text h4 {
+    color: #4a7a8c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mascot-text p {
+    color: #315e7a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.topic-item {
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: 0.3s;
+}
+
+.topic-item:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.topic-item strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #4a7a8c;
+    margin-bottom: 10px;
+}
+
+.grade-photo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 3px solid #4a7a8c;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+
+@keyframes fadeDown{
+0%{opacity:0; transform:translateY(-40px);}
+100%{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="members.html">About Us</a>
+    <a href="grade7.html">Grade 7</a>
+    <a href="grade8.html">Grade 8</a>
+    <a href="grade9sem1.html">Grade 9 Semester 1</a>
+    <a href="grade9sem2.html">Grade 9 Semester 2</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+<div class="title-section">
+    <h1>Welcome to</h1>
+    <h2>Physics Lab Online: Understanding Matter, Heat, and Electricity</h2>
+</div>
+
+<div class="content-box intro-box">
+    <h3>Introduction</h3>
+    <p>
+Physics helps us understand how matter and energy work in our world. From solids, liquids, and gases to heat, electricity, and magnetism, physics explains how things move, change, and interact. On this website, we will learn about density and pressure, heat transfer and thermal energy, electric current and circuits, and magnetism and electromagnetism. Step by step, we will explore how energy flows and how forces work in everyday life.    </p>
+</div>
+
+<div class="content-box">
+    <h3>What We Explore</h3>
+    <div class="topic-grid">
+        <div class="topic-item">
+            <strong>Grade 7 – Solid, Liquid, Gases</strong>
+            <p>Explore the states of matter, solids, liquids, and gases, and learn key concepts such as density, pressure, hydrostatic pressure, and Pascal's principle to understand how fluids and forces work in everyday life.</p>
+            <img src="matter.jpg" alt="Grade 7" class="grade-photo">
+        </div>
+        <div class="topic-item">
+            <strong>Grade 8 – Thermal Physics</strong>
+            <p>Learn how heat and temperature affect matter through topics such as heat capacity, latent heat, heating and cooling curves, Black's principle, and heat transfer (conduction, convection, and radiation).</p>
+            <img src="thermal physics.webp" alt="Grade 8" class="grade-photo">
+        </div>
+        <div class="topic-item">
+            <strong>Grade 9 Semester 1 – Dynamic Electricity</strong>
+            <p>Discover how electricity flows in circuits by studying electric potential, electric current, Ohm's law, Kirchhoff's law, electromotive force, resistors, and series and parallel circuits.</p>
+            <img src="circuit.png" alt="Grade 9" class="grade-photo">
+        </div>
+        <div class="topic-item">
+            <strong>Grade 9 Semester 2 – Magnetism</strong>
+            <p>Learn about magnets and magnetic materials, magnetic poles, magnetic induction, magnetization and demagnetization, magnetic fields, magnetic fields produced by electric currents, and electromagnetism along with some common uses of electromagnets.</p>
+            <img src="magnetism.png" alt="Magnetism" class="grade-photo">
+</div>
+    </div>
+</div>
+
+<div class="content-box">
+    <div class="school-info-text">
+        <h3>About Santa Laurensia School</h3>
+        <p>
+            Santa Laurensia School is dedicated to academic excellence and character development. Through this Physics AP Learning Website, students from Grade 7 to Grade 9 can explore important physics concepts in a clear and organized way.
+        </p>
+
+        <p><strong>📍 Address:</strong><br>
+        Pakulonan, Jl. Sutera Utama No.1, Pd. Jagung Tim., 
+        Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15325
+        </p>
+
+        <p><strong>🌐 Official Website:</strong><br>
+        <a href="https://www.santa-laurensia.com/" target="_blank" style="color:#1e3a5f; font-weight:bold;">
+        Santa Laurensia School
+        </a>
+        </p>
+    </div>
+    
+    <div class="school-logo-container">
+        <img src="logo-sl.png" alt="Santa Laurensia Logo" class="school-logo">
+    </div>
+</div>
+
+<div class="content-box">
+    <div class="mascot-img-container">
+        <img src="tiger mascot.png" alt="Mascot" class="mascot-img">
+    </div>
+    
+
+    <div class="mascot-text">
+        <h4>Our Motto</h4>
+        <p>
+            The motto of Santa Laurensia School, Educatio Puerilis Renovatio Mundi Est, means "The education of the young transforms the world." This Latin phrase highlights the school's dedication to providing holistic education, nurturing strong character, and preparing students to grow into responsible leaders who can positively shape the future.
+        </p>
+        <h4>Our Mascot</h4>
+        <p>
+            Santa Laurensia School (Alam Sutera) has the Tiger as its official mascot, symbolizing courage, teamwork, and strong spirit through the slogan "Home of Tigers." Known as the Santa Laurensia Tigers, the mascot helps build school pride and unity, often celebrated with the cheer "Go Tigers, Go!".
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Physics Lab Online. All rights reserved.</p>
+</footer>
+
+<script>
+const boxes = document.querySelectorAll('.content-box');
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.15
+});
+
+boxes.forEach(box=>{
+    observer.observe(box);
+});
+</script>
+
+
+</body>
+</html>

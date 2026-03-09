@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sources - Physics Lab Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+            background-image:url('physics bg.png');
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+            color:#333;
+        }
+        nav{
+            background-color:#4a7a8c;
+            padding:15px;
+            text-align:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+            box-shadow:0 2px 10px rgba(0,0,0,0.2);
+        }
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-size:18px;
+            font-weight:bold;
+            position:relative;
+            transition:color 0.3s ease;
+        }
+        nav a::after{
+            content:'';
+            position:absolute;
+            width:0;
+            height:2px;
+            bottom:-5px;
+            left:0;
+            background-color:#6cbcc4;
+            transition:0.3s;
+        }
+        nav a:hover::after{
+            width:100%;
+        }
+        nav a:hover{
+            color:#6cbcc4;
+        }
+        .title-section{
+            background-color:rgba(153,208,242,0.9);
+            padding:50px 20px;
+            text-align:center;
+            border-radius:10px;
+            box-shadow:0 4px 20px rgba(0,0,0,0.3);
+            animation:fadeDown 1s ease forwards;
+        }
+        .title-section h1{
+            font-size:42px;
+            color:#1e3a5f;
+            margin:0;
+        }
+        .title-section h2{
+            font-size:24px;
+            color:#315e7a;
+            margin-top:10px;
+        }
+        .content-box{
+            background-color:rgba(255,255,255,0.95);
+            width:70%;
+            margin:35px auto;
+            padding:28px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+            opacity:0;
+            transition:opacity 0.8s ease, transform 0.35s ease;
+            cursor:pointer;
+        }
+        .content-box.show{
+            opacity:1;
+        }
+        .content-box:hover{
+            transform:translateY(-5px) scale(1.01);
+            box-shadow:0 10px 25px rgba(0,0,0,0.25);
+        }
+        .content-box h3{
+            color:#1e3a5f;
+            font-size:26px;
+            border-bottom:2px solid #4a7a8c;
+            padding-bottom:6px;
+            margin:0 0 10px 0;
+        }
+        .content-box p{
+            color:#315e7a;
+            font-size:17px;
+            line-height:1.4;
+            margin:4px 0;
+            word-wrap: break-word;
+        }
+        .content-box a{
+            color:#1e3a5f;
+            text-decoration:underline;
+        }
+        .content-box a:hover{
+            color:#4a7a8c;
+        }
+        footer{
+            text-align:center;
+            padding:25px;
+            background:rgba(0,0,0,0.2);
+            backdrop-filter:blur(5px);
+            color:white;
+            margin-top:40px;
+        }
+        @keyframes fadeDown{
+            0%{opacity:0; transform:translateY(-40px);}
+            100%{opacity:1; transform:translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="members.html">About Us</a>
+    <a href="grade7.html">Grade 7</a>
+    <a href="grade8.html">Grade 8</a>
+    <a href="grade9sem1.html">Grade 9 Semester 1</a>
+    <a href="grade9sem2.html">Grade 9 Semester 2</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+<div class="title-section">
+    <h1>Sources</h1>
+    <h2>Reference Links for Physics Lab Online</h2>
+</div>
+
+<div class="content-box">
+    <h3>Home Page (Images)</h3>
+    <p><a href="https://ibphysics.org/topic3/" target="_blank">https://ibphysics.org/topic3/</a></p>
+    <p><a href="https://studylib.net/doc/9775198/heat-transfer-conduction--convection--and-radiation?p=3" target="_blank">https://studylib.net/doc/9775198/heat-transfer-conduction--convection--and-radiation?p=3</a></p>
+    <p><a href="https://santiagoestradabernal2.jimdofree.com/1-per%C3%ADodo-2/contenido/" target="_blank">https://santiagoestradabernal2.jimdofree.com/1-per%C3%ADodo-2/contenido/</a></p>
+</div>
+
+<div class="content-box">
+    <h3>Grade 7</h3>
+    <p><a href="https://app.sophia.org/tutorials/3-states-of-matter-solid-liquid-and-gas" target="_blank">https://app.sophia.org/tutorials/3-states-of-matter-solid-liquid-and-gas</a></p>
+    <p><a href="https://www.britannica.com/science/density" target="_blank">https://www.britannica.com/science/density</a></p>
+    <p><a href="https://kingofthecurve.org/blog/diagram-hydrostatic-pressure-liquids" target="_blank">https://kingofthecurve.org/blog/diagram-hydrostatic-pressure-liquids</a></p>
+    <p><a href="https://www.britannica.com/science/Pascals-principle" target="_blank">https://www.britannica.com/science/Pascals-principle</a></p>
+    <p>Grade 7 Chapter 2 PPT</p>
+</div>
+
+<div class="content-box">
+    <h3>Grade 8</h3>
+    <p><a href="https://www.slideshare.net/slideshow/specific-heat-capacity-248754040/248754040" target="_blank">https://www.slideshare.net/slideshow/specific-heat-capacity-248754040/248754040</a></p>
+    <p><a href="https://byjus.com/jee/latent-heat/" target="_blank">https://byjus.com/jee/latent-heat/</a></p>
+    <p><a href="https://www.docbrown.info/page03/3_52states-13.htm" target="_blank">https://www.docbrown.info/page03/3_52states-13.htm</a></p>
+    <p><a href="https://icosics.blogspot.com/2008/09/black-principle.html" target="_blank">https://icosics.blogspot.com/2008/09/black-principle.html</a></p>
+    <p><a href="https://taylorsciencegeeks.weebly.com/blog/thermal-energy-heat-transfer-conduction" target="_blank">https://taylorsciencegeeks.weebly.com/blog/thermal-energy-heat-transfer-conduction</a></p>
+    <p><a href="https://thermtest.com/heat-transfer-through-conduction-examples-in-everyday-life" target="_blank">https://thermtest.com/heat-transfer-through-conduction-examples-in-everyday-life</a></p>
+    <p>Grade 8 Chapter 2 PPT</p>
+</div>
+
+<div class="content-box">
+    <h3>Grade 9 Semester 1</h3>
+    <p><a href="https://notebooklm.google.com/notebook/8c227332-a269-493d-9b80-3df7632d196f?utm_source=classroom&utm_medium=referral&authuser=0" target="_blank">https://notebooklm.google.com/notebook/8c227332-a269-493d-9b80-3df7632d196f?utm_source=classroom&utm_medium=referral&authuser=0</a></p>
+    <p><a href="https://www.geeksforgeeks.org/physics/electric-potential-vs-potential-difference/" target="_blank">https://www.geeksforgeeks.org/physics/electric-potential-vs-potential-difference/</a></p>
+    <p><a href="https://byjus.com/physics/electric-current/" target="_blank">https://byjus.com/physics/electric-current/</a></p>
+    <p><a href="https://read.bookcreator.com/0R1XLAxJotNK8WI99NqrCRUCtcz2/XvE_qU6bRVK7lJsDmWPY1Q/9DzRfoFvTMWYNtkJZ4OOeA" target="_blank">https://read.bookcreator.com/0R1XLAxJotNK8WI99NqrCRUCtcz2/XvE_qU6bRVK7lJsDmWPY1Q/9DzRfoFvTMWYNtkJZ4OOeA</a></p>
+    <p><a href="https://byjus.com/physics/kirchhoffs-law/" target="_blank">https://byjus.com/physics/kirchhoffs-law/</a></p>
+    <p><a href="https://byjus.com/physics/difference-between-series-and-parallel-circuits/" target="_blank">https://byjus.com/physics/difference-between-series-and-parallel-circuits/</a></p>
+    <p><a href="https://byjus.com/physics/electromotive-force/" target="_blank">https://byjus.com/physics/electromotive-force/</a></p>
+    <p><a href="https://www.wilsoncables.com/en/news/apa-itu-resistor" target="_blank">https://www.wilsoncables.com/en/news/apa-itu-resistor</a></p>
+    <p>Grade 9 Chapter 2 PPT</p>
+</div>
+
+<div class="content-box">
+    <h3>Grade 9 Semester 2</h3>
+
+    <p><a href="https://moleymagneticsinc.com/temporary-vs-permanent-magnets-the-difference/" target="_blank">
+    https://moleymagneticsinc.com/temporary-vs-permanent-magnets-the-difference/</a></p>
+
+    <p><a href="https://www.britannica.com/science/magnetic-pole" target="_blank">
+    https://www.britannica.com/science/magnetic-pole</a></p>
+
+    <p><a href="https://gauder.net/en/blogs/news/magnetische-induktion?srsltid=AfmBOooOW0kqNKfEJOP7hvCMQPjkn-8sHUuHhoVnQh7tZo0BqwZzxLaw" target="_blank">
+    https://gauder.net/en/blogs/news/magnetische-induktion</a></p>
+
+    <p><a href="https://en.openprof.com/wb/chapter:methods_of_magnetization_and_demagnetization/3625/" target="_blank">
+    https://en.openprof.com/wb/chapter:methods_of_magnetization_and_demagnetization/3625/</a></p>
+
+    <p><a href="https://byjus.com/physics/magnetic-field/" target="_blank">
+    https://byjus.com/physics/magnetic-field/</a></p>
+
+    <p><a href="https://www.bbc.co.uk/bitesize/guides/zsqnrwx/revision/4" target="_blank">
+    https://www.bbc.co.uk/bitesize/guides/zsqnrwx/revision/4</a></p>
+
+    <p><a href="https://byjus.com/physics/electromagnetism/" target="_blank">
+    https://byjus.com/physics/electromagnetism/</a></p>
+
+    <p>Grade 9 Chapter 4 PPT</p>
+</div>
+
+<footer>
+    <p>© 2026 Physics Lab Online</p>
+</footer>
+
+<script>
+const boxes = document.querySelectorAll('.content-box');
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{ threshold:0.15 });
+boxes.forEach(box=>{
+    observer.observe(box);
+});
+</script>
+
+</body>
+</html>

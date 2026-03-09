@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grade 9 Semester 2 - Magnetism</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    background-image:url('physics bg.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:#333;
+}
+
+nav{
+    background-color:#4a7a8c;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+    transition:color 0.3s ease;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:-5px;
+    left:0;
+    background-color:#6cbcc4;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#6cbcc4;
+}
+
+.title-section{
+    background-color:rgba(153,208,242,0.9);
+    padding:50px 20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.3);
+    animation:fadeDown 1s ease forwards;
+}
+
+.title-section h1{
+    font-size:42px;
+    color:#1e3a5f;
+    margin:0;
+}
+
+.title-section h2{
+    font-size:24px;
+    color:#315e7a;
+    margin-top:10px;
+}
+
+.content-box{
+    background-color:rgba(255,255,255,0.95);
+    width:70%;
+    margin:35px auto;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    opacity:0;
+    transition:opacity 0.8s ease, transform 0.35s ease;
+    cursor:pointer;
+}
+
+.content-box.show{
+    opacity:1;
+}
+
+.content-box:hover{
+    transform:translateY(-5px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.content-box h3{
+    color:#1e3a5f;
+    font-size:26px;
+    border-bottom:2px solid #4a7a8c;
+    padding-bottom:6px;
+    margin:0 0 10px 0;
+}
+
+.content-box p{
+    color:#315e7a;
+    font-size:17px;
+    line-height:1.4;
+    margin:4px 0;
+}
+
+ol,ul{
+    margin:6px 0 10px 22px;
+    line-height:1.4;
+}
+
+li{
+    margin:4px 0;
+}
+
+.grade-photo{
+    max-width:420px;
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    border:3px solid #4a7a8c;
+    margin:12px auto;
+    display:block;
+}
+
+.video-container{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(5px);
+    color:white;
+    margin-top:40px;
+}
+
+@keyframes fadeDown{
+    0%{opacity:0; transform:translateY(-40px);}
+    100%{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="members.html">About Us</a>
+    <a href="grade7.html">Grade 7</a>
+    <a href="grade8.html">Grade 8</a>
+    <a href="grade9sem1.html">Grade 9 Semester 1</a>
+    <a href="grade9sem2.html">Grade 9 Semester 2</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+
+<div class="title-section">
+    <h1>Grade 9 Semester 2</h1>
+    <h2>Chapter 4: Magnetism</h2>
+</div>
+
+
+<div class="content-box">
+
+<h3>Introduction</h3>
+
+<p>
+Magnetism is a physical force produced by moving electric charges. Magnets can attract or repel each other depending on their poles.
+</p>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed?v=yXCeuSiTOug"
+title="Magnetism Introduction"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.1 Materials and Magnets</h3>
+
+<p>
+Magnets can attract objects made of magnetic materials such as iron, steel, nickel, and cobalt <strong>(Conductors).</strong>
+</p>
+
+<p>
+Materials such as plastic, rubber, paper, and wood are non-magnetic, meaning they are not attracted by magnets <strong>(Insulators).</strong>
+</p>
+
+<p><strong>Types of Magnets</strong></p>
+
+<p><strong>Permanent Magnets</strong></p>
+<p>
+Permanent magnets produce their own magnetic field without any external power source. They are made from magnetically hard materials (such as steel) that retain magnetism after being magnetized.
+</p>
+
+<p><strong>Temporary Magnets</strong></p>
+<p>
+Temporary magnets act as magnets only while exposed to an external magnetic field or electric current. Magnetically soft materials, like iron, lose their magnetism easily and are often used to make temporary magnets or electromagnets.
+</p>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.2 Magnetic Poles</h3>
+
+<p>
+The strongest parts of a magnet are its poles, called the north pole and south pole.
+</p>
+
+<ul>
+<li>Like poles repel each other.</li>
+<li>Opposite poles attract each other.</li>
+</ul>
+    <img src="magnetic poles.png" class="grade-photo">
+
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.3 Magnetic Induction</h3>
+
+<p>
+When magnetic materials such as iron nails or steel paper clips touch a magnet, they become temporary magnets.
+</p>
+
+<p>
+The ends facing the magnet become opposite poles, which allows objects to form a chain because opposite poles attract each other.
+</p>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.4 Methods of Magnetization and Demagnetization</h3>
+
+<p><strong>Methods of Magnetization</strong></p>
+
+<p><strong>Magnetic Induction</strong></p>
+<p>
+A material becomes magnetized when it is placed near a magnet. The magnetic field rearranges the magnetic domains inside the material.
+</p>
+
+<p><strong>Stroking Method</strong></p>
+<p>
+Rubbing a magnet repeatedly in one direction along a material aligns the domains and magnetizes the object.
+</p>
+
+<p><strong>Electromagnetism</strong></p>
+<p>
+Passing an electric current through a coil of wire around an iron core produces a magnetic field, creating an electromagnet that can be turned on or off.
+</p>
+
+<p><strong>Methods of Demagnetization</strong></p>
+
+<ul>
+<li>Heating the magnet</li>
+<li>Hammering the magnet</li>
+<li>Applying an alternating magnetic field</li>
+</ul>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed?v=Dka-cROHxBY"
+title="Magnetization and Demagnetization"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.5 Magnetic Field</h3>
+
+<p>
+Every magnet creates a region around it where magnetic forces can be detected. This region is called a magnetic field.
+</p>
+
+<p>
+Magnetic field lines show the shape, direction, and strength of the field. They run from the north pole to the south pole. Lines that are closer together indicate a stronger magnetic field.
+</p>
+
+<p><strong>Uniform Magnetic Field</strong></p>
+
+<p>
+A uniform magnetic field is produced between the north and south poles of two magnets where the field lines are straight and evenly spaced. The strength and direction of the field are the same throughout the region.
+</p>
+    <img src="magnetic field.png" class="grade-photo">
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.6 Magnetic Field in a Wire with Electric Current</h3>
+
+<p>
+When an electric current flows through a wire, a magnetic field is produced around it.
+</p>
+
+<p>
+The magnetic field forms circular patterns around the wire. The direction of the magnetic field can be observed using iron filings or a plotting compass.
+</p>
+
+<p><strong>The right-hand grip rule</strong></p>
+
+<ul>
+<li>The thumb points in the direction of the current.</li>
+<li>The curled fingers show the direction of the magnetic field.</li>
+</ul>
+    <img src="right hand rule.png" class="grade-photo">
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.7 Electromagnetism</h3>
+
+<p>
+An electromagnet is created when electric current flows through a coil of wire (solenoid) wrapped around a soft iron core.
+</p>
+
+<p>The magnetic field strength can be increased by:</p>
+
+<ul>
+<li>Increasing the electric current</li>
+<li>Increasing the number of turns in the coil</li>
+<li>Using a magnetically soft core such as iron</li>
+</ul>
+
+<p>
+Electromagnets are useful because they can be turned on and off by controlling the electric current.
+</p>
+
+</div>
+
+
+<div class="content-box">
+
+<h3>4.8 Some Common Uses of Electromagnets</h3>
+
+<p><strong>Electric Bell</strong></p>
+
+<p>
+An electric bell works using an electromagnet.
+</p>
+
+<ol>
+<li>When the switch is closed, the circuit is completed.</li>
+<li>Electric current flows through the solenoid, magnetizing the electromagnet.</li>
+<li>The electromagnet attracts a soft iron armature.</li>
+<li>The armature moves a hammer that strikes the gong, producing sound.</li>
+<li>The movement breaks the circuit.</li>
+<li>A spring pulls the armature back to its original position.</li>
+<li>The cycle repeats until the switch is opened.</li>
+</ol>
+    <img src="electric bell.png" class="grade-photo">
+
+</div>
+
+<div class="content-box">
+  <h3>Learn More From our Presentation:</h3>
+  <embed src="Magnetism PPT.pdf" width="100%" height="600px" type="application/pdf">
+</div>
+
+<div class="content-box">
+
+<h3>Interactive Simulation: Magnetic Field Around a Wire</h3>
+
+<p>
+Use this interactive simulation to explore how an electric current creates a magnetic field around a wire.
+Move the compass to observe the direction of the magnetic field and apply the right-hand rule to understand how current direction affects the field.
+</p>
+
+<div class="video-container">
+<iframe 
+src="https://javalab.org/en/magnetic_field_around_a_wire_en/"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+
+<div class="content-box">
+
+<h3>Try the Interactive Quiz!</h3>
+
+<p>
+<a href="https://dashboard.blooket.com/set/69aea85656de72a066cc3b95" target="_blank">
+Open the Blooket Practice Activity
+</a>
+</p>
+
+</div>
+
+<footer>
+<p>© 2026 Physics Lab Online</p>
+</footer>
+
+
+<script>
+const boxes = document.querySelectorAll('.content-box');
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.15
+});
+
+boxes.forEach(box=>{
+    observer.observe(box);
+});
+</script>
+
+</body>
+</html>
